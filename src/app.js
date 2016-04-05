@@ -51,7 +51,11 @@ export default class App extends Component {
         <p>{this.state.input}</p>
         <h1>Mensajes enviados</h1>
         <button onClick={this.onClick}>Press me</button>
-        <p>{this.state.messages}</p>
+        <ol>
+          {this.state.messages.map(function(message) {
+            return <li>{message}</li>;
+          })}
+        </ol>
       </form>
     )
   }
