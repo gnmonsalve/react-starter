@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "react": "^15.0.0-rc.2",
-    "react-dom": "^15.0.0-rc.2"
+    "react-bootstrap": "^0.28.5",
+    "react-dom": "^15.0.0-rc.2",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
@@ -33,5 +35,16 @@
       "<rootDir>/node_modules/react-dom",
       "<rootDir>/node_modules/react-addons-test-utils"
     ]
-  }
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpatiwi/react-starter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrpatiwi/react-starter/issues"
+  },
+  "homepage": "https://github.com/mrpatiwi/react-starter#readme"
 }
