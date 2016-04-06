@@ -16,13 +16,14 @@ export default class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.onClick = this.onClick.bind(this)
   }
+
   onChange(e) {
     this.setState({ input: e.target.value })
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    fetch(
+        fetch(
       'http://localhost:3001/add',
       {
         method: 'POST',
@@ -38,21 +39,23 @@ export default class App extends Component {
       }
     )
   }
+
   onClick(e){
     fetch('http://localhost:3001/messages')
     .then(result => result.json())
     .then(result => this.setState({ messages: result.messages }))
   }
+
   render() {
     return (
-      <form className="commentForm" onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit}>
         <h1>Ingrese un nuevo mensaje</h1>
         <input type="text" onChange={this.onChange}></input>
         <p>{this.state.input}</p>
         <h1>Mensajes enviados</h1>
         <button onClick={this.onClick}>Press me</button>
         <ol>
-          {this.state.messages.map(function(message) {
+          {this.state.messages.map(message => {
             return <li>{message}</li>;
           })}
         </ol>
